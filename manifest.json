@@ -1,0 +1,20 @@
+
+{
+  "name": "CannaBiz HR - Cannabis Consulting",
+  "short_name": "BizHR",
+  "description": "Professional cannabis HR consulting services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2d4a3e",
+  "theme_color": "#4a7c59",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "generated-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "consulting", "hr"]
+}
