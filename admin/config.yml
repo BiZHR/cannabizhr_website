@@ -1,37 +1,38 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: BiZHR/cannabizhr_website
   branch: main
 
-media_folder: "static/images/uploads"
+media_folder: "images/uploads"
 public_folder: "/images/uploads"
-
-site_url: "https://bizhr.org"
-logo_url: "/images/uploads/logo.png"
 
 publish_mode: editorial_workflow
 
 collections:
-  - name: "posts"
-    label: "Blog Posts"
-    folder: "content/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "team"
-    label: "Team Members"
-    folder: "content/team"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Position", name: "position", widget: "string" }
-      - { label: "Photo", name: "photo", widget: "image", required: false }
-      - { label: "Bio", name: "bio", widget: "text", required: false }
-      - { label: "Email", name: "email", widget: "string", required: false }
-
-  # Add more collections as needed (e.g., products, testimonials, etc.)
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "about.html"
+        label: "About Page"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "contact.html"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "blog.html"
+        label: "Blog Page"
+        name: "blog"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
