@@ -1,17 +1,31 @@
 backend:
   name: github
-  repo: BiZHR/YOUR-REPO-NAME # <-- replace with your actual repo!
-  branch: master
+  repo: BiZHR/cannabizhr_website
+  branch: main
 
-media_folder: "static/img"
-public_folder: "/img"
+media_folder: "images"
+public_folder: "/images"
 
 collections:
   - name: "pages"
     label: "Pages"
-    folder: "content/pages"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+    files:
+      - label: "About"
+        name: "about"
+        file: "about.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
+      - label: "Blog"
+        name: "blog"
+        file: "blog.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
+      - label: "Contact"
+        name: "contact"
+        file: "contact.html"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
+      # Add additional files as needed
