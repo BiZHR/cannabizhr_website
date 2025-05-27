@@ -1,9 +1,14 @@
 backend:
   name: github
   repo: BiZHR/cannabizhr_website
-  branch: main # or your default branch
+  branch: main
+  auth_scope: repo
+  base_url: https://bizhr.org
+  auth_endpoint: /api/auth
 
-media_folder: "images/uploads" # Where uploaded files go
+publish_mode: editorial_workflow
+
+media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
