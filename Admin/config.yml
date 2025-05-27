@@ -1,23 +1,17 @@
 backend:
   name: github
-  repo: BiZHR/cannabizhr_website
-  branch: main
-  auth_scope: repo
-  base_url: https://bizhr.org
-  auth_endpoint: /api/auth
+  repo: BiZHR/YOUR-REPO-NAME # <-- replace with your actual repo!
+  branch: master
 
-publish_mode: editorial_workflow
-
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/img"
+public_folder: "/img"
 
 collections:
   - name: "pages"
     label: "Pages"
-    files:
-      - label: "Home"
-        name: "home"
-        file: "index.html"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
